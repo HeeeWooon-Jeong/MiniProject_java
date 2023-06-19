@@ -77,8 +77,6 @@ public class Project_main {
 			System.out.println("--------------------------------------------------------------------------");
 	
 			
-			String answer = "";
-			String correct = "영화";
 			
 			if (select == 1) {
 				// 게임시작
@@ -92,27 +90,27 @@ public class Project_main {
 					System.out.println();
 					System.out.println("정답 제출 >> ");
 
-					
+					String input ="";
 					// 응답
-					answer = sc.next();
+					input = sc.next();
 					System.out.println();
 					
-					if (answer.equals("quit")) {
+					if (input.equals("quit")) {
 						// 게임 종료
 						System.out.println("게임을 종료합니다.");
 						idrp.Status(loginId, 0, 0);
 						break;
-					} else if (answer.equals("2")) {
+					} else if (input.equals("2")) {
 						System.out.println("힌트");
 						
-					}else if (answer.equals("3")) {
+					}else if (input.equals("3")) {
 						// 스토어 뷰
 						storeView.StoreView();
 						// 상점이용
 						CStore.usingStore();
 
 						System.out.println();
-					} else if (answer.equals(correct)) {
+					} else if (input.equals(correct)) {
 						// 정답 처리
 						System.out.println("정답입니다!");
 						System.out.println();
@@ -126,7 +124,7 @@ public class Project_main {
 						System.out.println();
 						System.out
 								.println("--------------------------------------------------------------------------");
-					} else if (answer != correct) {
+					} else if (input != correct) {
 						// 오답 처리
 						System.out.println("땡.");
 						System.out.println();
